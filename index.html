@@ -5424,10 +5424,12 @@
     const flag = what => cheatFlag('interference', what, false);
     const ban = what => cheatFlag('interference', what, true);
     const hard = what => cheatFlag('tamper', what, 'hard');
-    // a copy of the game running anywhere but chamigolf.github.io has had its code changed (local testing on localhost is only flagged)
+    // a copy of the game running anywhere but chamigolf.github.io has had its code changed (local testing on localhost and the
+    // robertburruano7-svg.github.io test copy are only flagged)
     try {
       const hn = location.hostname;
       if (/^(localhost|127\.0\.0\.1|\[::1\])$/.test(hn)) flag(`game running from a local copy (${hn})`);
+      else if (hn === 'robertburruano7-svg.github.io') flag(`game running from the test copy (${hn})`);
       else if (hn !== 'chamigolf.github.io') hard(`a modified copy of the game was running (${(location.protocol === 'file:' ? 'a file on the device' : hn).slice(0, 60)})`);
     } catch (e) {}
     try { if (navigator.webdriver) ban('an automated browser (webdriver) is running the game'); } catch (e) {}
