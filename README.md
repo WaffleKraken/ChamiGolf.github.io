@@ -4,7 +4,6 @@ A 3D, Chaminade-themed golf game that runs in any browser. Everything is in one 
 
 Play it at https://chamigolf.github.io/
 
-Test copy: https://robertburruano7-svg.github.io/ (this fork, hosted with GitHub Pages). GitHub only serves a repo at that root address when the repo is named exactly `robertburruano7-svg.github.io`, so rename it under Settings > General > Repository name first. Then open Settings > Pages, set Source to "Deploy from a branch", pick `main` and `/ (root)`, and save. Every push to `main` then goes live within a minute or two. The anti-cheat treats the test copy like localhost (it logs a flag instead of banning), but it still uses the live chamigolf1 Firebase database, and Google sign-in only works there once `robertburruano7-svg.github.io` is added under Firebase > Authentication > Settings > Authorized domains.
 
 ## How to play
 
